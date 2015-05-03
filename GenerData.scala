@@ -4,7 +4,7 @@ import scala.util.Random
 import java.io.{PrintWriter, File}
 
 /**
- * Created by hadoop on 15-4-26.
+ * K-Means算法测试数据生成程序
  */
 object KmeansData {
   //数据属性20维
