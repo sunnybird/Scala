@@ -82,13 +82,15 @@ object KmeansData {
   
   def main (args: Array[String]) {
 
-    if(args.length<1){
-      System.err.println("USAGE: Scala com.spark.data.KmeansData fileSize(MB) ")
+    if(args.length<2){
+      System.err.println("USAGE: Scala com.spark.data.KmeansData  fileSize(MB) filepath ")
       System.exit(1)
     }
     val filesize = args(0).toInt
-    println("Genereate"+filesize+"Mb File.................")
-    writeVector2File("data"+filesize+".txt",filesize*1024*1024)
+    val filepath = args(1).toString
+    
+    println("Genereate"+filesize+"Mb Data to "+filepath)
+    writeVector2File(filepath+"data"+filesize+".txt",filesize*1024*1024)
     println("finished..................")
 
   }
